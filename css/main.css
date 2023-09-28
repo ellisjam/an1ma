@@ -1,0 +1,145 @@
+@font-face {
+    font-family: 'Maestro Times';
+    src: url('/maestrotimes.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Maestro Times Italic';
+    src: url('/maestrotimes-it.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+#newfont{
+    font-family:'EntezareZohoor2';
+}
+
+
+/* Add your colours and variables here */
+
+:root {
+	--brand-color:#f00;
+	--link-color:#5F6277;
+	--heading-color:#6A6972;
+	--text-color:#6A6972;
+	--brand-font:'Maestro Times', serif;
+	--body-font:'Maestro Times Italic', serif;
+}
+
+/* Sensible Defaults */
+
+* {
+	box-sizing:border-box;
+}
+
+html, body {	
+	cursor: crosshair;
+}
+body {
+	margin:1rem;
+	background: #200406;
+	/*margin-bottom: 250px;*/
+}
+img {
+	max-width:100%;
+
+}
+
+a {
+	color:var(--link-color);
+	cursor: pointer;
+}
+
+a:hover {
+	color: white;
+}
+
+/* Text Styles */
+
+body {
+	color:var(--text-color);
+	font-family:var(--body-font);
+	font-size: 1.2rem;
+}
+h1, h2, h3, h4, h5, h6, .title {
+	color:var(--heading-color);
+	font-family:var(--brand-font);
+	font-size: 1.5rem;
+}
+
+
+/* Page Styles */
+
+header {
+	position: fixed;
+	left:0;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	width:100vw;
+	background:black;
+	padding: 0 1rem;
+	height: 40px;
+}
+
+header {
+	top: 0;
+}
+
+header a {
+	padding-left:1rem;
+}
+footer {
+	bottom: 0;
+}
+
+footer a {
+	padding: 0 2rem;
+}
+
+.release {
+	display: flex;
+	flex-direction: column;
+	align-items: left;
+	justify-content: center;
+	text-align:left;
+    margin-top: 60px;
+	height: calc(100%-40px);
+}
+
+.info {
+	display:flex;
+	flex-direction: row;
+	justify-content: space-between;
+	width: 600px;
+}
+
+.packshot img {
+	padding: 0;
+	margin:0;
+	margin-bottom: -10px;
+}
+
+@media only screen and (max-width:600px) {
+	.packshot img {
+		min-width:100%;
+	}
+	.info {
+		width: 100%;
+	}
+	body {
+		font-size:1rem;
+	}
+}
+
+#dynamicImage {
+	position: fixed;
+	bottom: 20px;
+	right: 20px;
+	width: 200px;
+	object-fit: contain;
+	height: auto;
+	mix-blend-mode:multiply;
+	filter:saturate(0)brightness(-200);
+}
