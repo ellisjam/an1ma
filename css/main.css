@@ -123,6 +123,10 @@ footer a {
 	.packshot img {
 		min-width:100%;
 	}
+
+	.packshot iframe {
+		height: 600px !important;
+	}
 	.info {
 		width: 100%;
 	}
